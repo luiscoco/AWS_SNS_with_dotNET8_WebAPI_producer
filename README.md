@@ -161,7 +161,7 @@ This command opens VSCode in the current directory, where . represents the curre
 We run this command to add the Azure Service Bus library
 
 ```
-dotnet add package 
+dotnet add package AWSSDK.SimpleNotificationService
 ```
 
 We also have to add the Swagger and OpenAPI libraries to access the API Docs
