@@ -60,11 +60,19 @@ Click Next: Permissions and choose Attach existing policies directly
 
 Search for **AmazonSNSFullAccess (for full access)** or create a custom policy based on your security requirements and attach it
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/55568a3f-66cd-47f0-8ae7-f36d0facb0ce)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/7ccd339d-d267-4982-b545-aab9186923bd)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/424cd1ca-36a7-40fb-a9e0-cd1b24ba3b20)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/4f023eaf-8fe7-4fe6-93bd-4ee1c85c99c6)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/612b58b4-44e7-4644-b250-20bee6cfde5c)
+
 Click Next: **Tags** (optional step) and Next: Review
 
 Review your settings and click Create user
-
-
 
 **Important**: Note down the Access key ID and Secret access key on the final page. You'll use these in your application to interact with AWS services
 
