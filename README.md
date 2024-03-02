@@ -10,17 +10,23 @@ To set up Amazon Simple Notification Service (SNS) for use with your application
 
 Go to the AWS Management Console and sign in
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/c8103e96-d172-4ad4-a6c3-f5119af528ea)
+
 **Step 2: Create an SNS Topic**
 
-Navigate to the SNS Dashboard within the AWS Management Console
+Navigate to the **SNS** Dashboard within the AWS Management Console
 
 Choose Topics from the sidebar and then click Create topic
 
-Select the Standard type for immediate, “at least once” delivery
+Select the **Standard** type for immediate, “at least once” delivery
 
-Enter a Name for your topic, such as mytopic, and optionally provide a display name
+Enter a Name for your topic, such as **mytopic**, and optionally provide a display name
 
 Click Create topic. This action creates your SNS topic and displays the topic's details page
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/6e0b3d63-ec74-4b4c-95ca-58093fef0323)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/3a7b5c40-26b0-4893-bcb5-9af35516a91e)
 
 **Step 3: Note the Topic ARN**
 
