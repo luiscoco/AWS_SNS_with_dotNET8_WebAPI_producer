@@ -54,6 +54,8 @@ Select Users from the sidebar and then click **Add user**
 
 Enter a **user name** and select Programmatic access as the access type
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/dba165d2-e931-4da7-bb0a-ee209ec8200e)
+
 Click Next: Permissions and choose Attach existing policies directly
 
 Search for **AmazonSNSFullAccess (for full access)** or create a custom policy based on your security requirements and attach it
