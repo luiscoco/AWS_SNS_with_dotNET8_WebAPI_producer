@@ -34,6 +34,8 @@ After creating your topic, you'll be directed to its details page
 
 Here, note the **ARN (Amazon Resource Name)**; you'll need this to publish messages to the topic from your application
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/c369f935-e09f-457e-a159-7b552c143db8)
+
 **Step 4: Set Up Permissions (Optional)**
 
 In the topic details page, click on the Access policy tab
