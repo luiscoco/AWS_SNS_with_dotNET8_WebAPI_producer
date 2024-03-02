@@ -6,11 +6,11 @@ See the source code for this sample in this github repo: https://github.com/luis
 
 To set up Amazon Simple Notification Service (SNS) for use with your application, follow these steps. This guide assumes you have an AWS account and basic familiarity with AWS services
 
-**Step 1**: Sign in to AWS Management Console
+**Step 1: Sign in to AWS Management Console**
 
 Go to the AWS Management Console and sign in
 
-**Step 2**: Create an SNS Topic
+**Step 2: Create an SNS Topic**
 
 Navigate to the SNS Dashboard within the AWS Management Console
 
@@ -22,13 +22,13 @@ Enter a Name for your topic, such as mytopic, and optionally provide a display n
 
 Click Create topic. This action creates your SNS topic and displays the topic's details page
 
-**Step 3**: Note the Topic ARN
+**Step 3: Note the Topic ARN**
 
 After creating your topic, you'll be directed to its details page
 
 Here, note the ARN (Amazon Resource Name); you'll need this to publish messages to the topic from your application
 
-**Step 4**: Set Up Permissions (Optional)
+**Step 4: Set Up Permissions (Optional)**
 
 In the topic details page, click on the Access policy tab
 
@@ -36,7 +36,7 @@ You can edit the policy directly in JSON or use the Basic view to add permission
 
 For most applications, the default policy allows all AWS account users to publish and subscribe. Adjust this according to your security requirements
 
-**Step 5**: Create an IAM User (For Programmatic Access)
+**Step 5: Create an IAM User (For Programmatic Access)**
 
 If you don't already have an IAM user with permissions to access SNS, follow these steps:
 
@@ -56,15 +56,15 @@ Review your settings and click Create user
 
 Important: Note down the Access key ID and Secret access key on the final page. You'll use these in your application to interact with AWS services
 
-**Step 6**: Update Your Application
+**Step 6: Update Your Application**
 
 Update your application with the SNS topic ARN, and the IAM user's access key ID and secret access key, ensuring they are securely stored and not hard-coded into your application
 
-**Step 7**: Install AWS SDK for .NET
+**Step 7: Install AWS SDK for .NET**
 
 If not already done, install the AWS SDK for .NET in your project to interact with SNS
 
-**Step 8**: Test Your Application
+**Step 8: Test Your Application**
 
 Test your application by sending a message to your SNS topic and verifying that it's received by any subscribers or logging the response to ensure it's sent successfully
 
