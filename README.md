@@ -166,23 +166,107 @@ dotnet add package AWSSDK.SimpleNotificationService
 
 We also have to add the Swagger and OpenAPI libraries to access the API Docs
 
-This is the csproj file including the project dependencies
+This is the **csproj** file including the project dependencies
 
-
+![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/0ad5c6b2-1ddd-4dc9-9e37-937c83875bbd)
 
 ## 4. Create the project structure
 
+![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/e80159e9-a5d0-4ca8-b125-fab56b0bebf8)
 
 ## 5. Create the Controller
 
-```csharp
+**SenderController.cs**
 
+```csharp
+using System.Threading.Tasks;
+using Amazon.SimpleNotificationService;
+using Amazon.SimpleNotificationService.Model;
+using Microsoft.AspNetCore.Mvc;
+
+namespace AwsSnsSenderApi.Controllers
+{
+    public class MessageDto
+    {
+        public string? Body { get; set; }
+        public string? Priority { get; set; }
+    }
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class SnsController : ControllerBase
+    {
+        private static string accessKey = "AKIA54SNDJKIETHXVI6S";
+        private static string secretKey = "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";
+        private static string topicArn = "arn:aws:sns:eu-west-3:954718177936:mytopic";
+        private static AmazonSimpleNotificationServiceClient client;
+
+        static SnsController()
+        {
+            // It's better to use IAM roles or environment credentials for production applications
+            client = new AmazonSimpleNotificationServiceClient(accessKey, secretKey, Amazon.RegionEndpoint.EUWest3);
+        }
+
+        [HttpPost("send")]
+        public async Task<ActionResult> SendMessage([FromBody] MessageDto messageDto)
+        {
+            var request = new PublishRequest
+            {
+                TopicArn = topicArn,
+                Message = messageDto.Body,
+                MessageAttributes = new Dictionary<string, MessageAttributeValue>
+                {
+                    { "priority", new MessageAttributeValue { DataType = "String", StringValue = messageDto.Priority } }
+                }
+            };
+
+            var response = await client.PublishAsync(request);
+
+            return Ok($"Sent message: {messageDto.Body}, Priority: {messageDto.Priority}, MessageId: {response.MessageId}");
+        }
+    }
+}
 ```
 
 ## 6. Modify the application middleware(program.cs)
 
-```csharp
+**Program.cs**
 
+```csharp
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.OpenApi.Models;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+
+// Add Swagger
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServiceBusSenderApi", Version = "v1" });
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+app.UseRouting();
+
+// Enable middleware to serve generated Swagger as a JSON endpoint.
+app.UseSwagger();
+
+// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ServiceBusSenderApi v1");
+});
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
 ```
 
 ## 7. Run and Test the application
@@ -213,13 +297,3 @@ curl -X 'POST' \
 After executing the above request we get this response
 
 ![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/8411e64a-adcb-4231-b008-4dfeef84b556)
-
-We confirm in the AWS SNS we recevied the message
-
-
-
-We navigate to the subscription and see the received message
-
-
-
-See also the custom message property we added to the message
