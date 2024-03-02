@@ -193,12 +193,26 @@ We execute this command to run the application
 dotnet run
 ```
 
-We navigate to the application endpoint: 
+![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/22ae9c15-ea6d-47ed-a8a9-a34d985a09ed)
 
+We navigate to the application endpoint: http://localhost:5031/swagger/index.html
+
+```
+curl -X 'POST' \
+  'http://localhost:5031/api/Sns/send' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "body": "my first AWS message",
+  "priority": "high"
+}'
+```
+
+![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/54fe5327-d2dd-4223-86e3-bab8354192f3)
 
 After executing the above request we get this response
 
-
+![image](https://github.com/luiscoco/AWS_SNS_with_dotNET8_WebAPI_producer/assets/32194879/8411e64a-adcb-4231-b008-4dfeef84b556)
 
 We confirm in the AWS SNS we recevied the message
 
