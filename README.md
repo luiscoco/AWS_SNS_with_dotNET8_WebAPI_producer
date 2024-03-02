@@ -84,9 +84,13 @@ Update your application with the SNS topic ARN, and the IAM user's **access key 
 
 ![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/2e294411-bf9e-4a05-9412-3f4560518792)
 
-![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/2871944f-6a40-455f-945a-3bf8f9f19527)
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/8ef3c199-9525-41ff-a6da-e369fab70059)
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/7c82a832-7d5b-4c33-9192-ec6274aa52b1)
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/3f9dbb27-d034-4633-a160-970899b3e76d)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/122d5508-be6d-41c2-9e8f-71ffbd903020)
 
 **Step 7: Install AWS SDK for .NET**
 
