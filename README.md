@@ -36,7 +36,7 @@ You can edit the policy directly in JSON or use the Basic view to add permission
 
 For most applications, the default policy allows all AWS account users to publish and subscribe. Adjust this according to your security requirements
 
-**Step 5: Create an IAM User (For Programmatic Access)**
+**Step 5: Create an IAM User (for Programmatic Access)**
 
 If you don't already have an IAM user with permissions to access SNS, follow these steps:
 
@@ -54,7 +54,7 @@ Click Next: Tags (optional step) and Next: Review
 
 Review your settings and click Create user
 
-Important: Note down the Access key ID and Secret access key on the final page. You'll use these in your application to interact with AWS services
+**Important**: Note down the Access key ID and Secret access key on the final page. You'll use these in your application to interact with AWS services
 
 **Step 6: Update Your Application**
 
