@@ -28,6 +28,10 @@ Click Create topic. This action creates your SNS topic and displays the topic's 
 
 ![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/3a7b5c40-26b0-4893-bcb5-9af35516a91e)
 
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/815db1de-bc4a-4c23-9bf6-5f82f558ad46)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/134caa95-450c-4cff-902c-49f70c7012b4)
+
 **Step 3: Note the Topic ARN**
 
 After creating your topic, you'll be directed to its details page
