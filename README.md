@@ -80,7 +80,13 @@ Review your settings and click Create user
 
 **Step 6: Update Your Application**
 
-Update your application with the SNS topic ARN, and the IAM user's access key ID and secret access key, ensuring they are securely stored and not hard-coded into your application
+Update your application with the SNS topic ARN, and the IAM user's **access key ID** and **secret access key**, ensuring they are securely stored and not hard-coded into your application
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/2e294411-bf9e-4a05-9412-3f4560518792)
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/2871944f-6a40-455f-945a-3bf8f9f19527)
+
+
 
 **Step 7: Install AWS SDK for .NET**
 
