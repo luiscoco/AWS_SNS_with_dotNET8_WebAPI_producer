@@ -32,33 +32,37 @@ Click Create topic. This action creates your SNS topic and displays the topic's 
 
 After creating your topic, you'll be directed to its details page
 
-Here, note the ARN (Amazon Resource Name); you'll need this to publish messages to the topic from your application
+Here, note the **ARN (Amazon Resource Name)**; you'll need this to publish messages to the topic from your application
 
 **Step 4: Set Up Permissions (Optional)**
 
 In the topic details page, click on the Access policy tab
 
-You can edit the policy directly in JSON or use the Basic view to add permissions via the interface
+You can edit the policy directly in JSON or use the **Basic** view to add permissions via the interface
 
 For most applications, the default policy allows all AWS account users to publish and subscribe. Adjust this according to your security requirements
+
+![image](https://github.com/luiscoco/AWS_ServiceBus_with_dotNET8_WebAPI_producer/assets/32194879/45cb4891-028e-4be8-a6e4-d5b0ec76b8e1)
 
 **Step 5: Create an IAM User (for Programmatic Access)**
 
 If you don't already have an IAM user with permissions to access SNS, follow these steps:
 
-Navigate to the IAM Dashboard within the AWS Management Console
+Navigate to the **IAM** Dashboard within the AWS Management Console
 
-Select Users from the sidebar and then click Add user
+Select Users from the sidebar and then click **Add user**
 
-Enter a user name and select Programmatic access as the access type
+Enter a **user name** and select Programmatic access as the access type
 
 Click Next: Permissions and choose Attach existing policies directly
 
-Search for AmazonSNSFullAccess (for full access) or create a custom policy based on your security requirements and attach it
+Search for **AmazonSNSFullAccess (for full access)** or create a custom policy based on your security requirements and attach it
 
-Click Next: Tags (optional step) and Next: Review
+Click Next: **Tags** (optional step) and Next: Review
 
 Review your settings and click Create user
+
+
 
 **Important**: Note down the Access key ID and Secret access key on the final page. You'll use these in your application to interact with AWS services
 
