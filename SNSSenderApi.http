@@ -1,0 +1,6 @@
+@SNSSenderApi_HostAddress = http://localhost:5031
+
+GET {{SNSSenderApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
